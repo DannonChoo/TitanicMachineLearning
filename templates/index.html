@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>Titanic ML</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand font-weight-bold" href="/">Titanic Survival Prediction</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="" class="">
+        <div class="container home">
+            <div class="row py-5">
+                <div class="col-md-12 text-center text-white">
+                    <h1>Predict your fate on the Titanic</h1>
+                    <hr class="hr-light my-4 w-75">
+                    <div class="card-body">
+                        <form id='' class="col-4 offset-4" action="/predict" method="POST">
+                            <div>
+                                <h5>Enter your fare value</h5>
+                                <div class="form-group text-white text-center">
+                                    <input required type="number" class="form-control text-center" name="optionId"
+                                        placeholder="Fare">
+                                </div>
+                                <h5>Enter your age</h5>
+                                <div class="form-group text-white text-center">
+                                    <input required type="number" class="form-control text-center" name="optionId"
+                                        placeholder="Age">
+                                </div>
+                                <h5>Enter your gender</h5>
+                                <div class="form-group text-white text-center">
+                                    <input required type="number" class="form-control text-center" name="optionId"
+                                        placeholder="Gender">
+                                </div>
+                                <h5>Enter your ticket class (1, 2, 3)</h5>
+                                <div class="form-group text-white text-center">
+                                    <input required type="number" class="form-control text-center" name="optionId"
+                                        placeholder="Ticket Class">
+                                </div>
+                                <h5>Enter your family size</h5>
+                                <div class="form-group text-white text-center">
+                                    <input required type="number" class="form-control text-center" name="optionId"
+                                        placeholder="Family Size">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <input id="submit" type="submit" class="btn btn-light changeSubmit">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-4 offset-4">
+                        {{ prediction_text }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
