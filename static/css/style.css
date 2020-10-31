@@ -1,0 +1,35 @@
+body {
+    --icon: #ffffff;
+    background: #333;
+}
+
+.home {
+    margin-top: 150px;
+}
+
+hr.hr-light {
+    border-top: 1px solid white;
+}
+
+/*nav bar*/
+
+.navbar {
+    background-color: #484848;
+}
+
+.navbar.scrolled {
+    background-color: #563e91 !important;
+    transition: background-color 200ms linear;
+}
+
+/*form*/
+
+form input[type="number"] {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+
